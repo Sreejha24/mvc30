@@ -1,0 +1,40 @@
+
+CREATE TABLE Employeess(  
+EmployeeID INT NOT NULL PRIMARY KEY Identity(1,1),  
+FirstName varchar(255) NOT NULL,  
+LastName varchar(255), 
+Email varchar(200),  
+City varchar(255)  
+);  
+ALTER Table Employees
+Drop column Mobile;
+
+
+ALTER Table Employeess
+Add Mobile bigint;
+
+SELECT * FROM Employeess
+INSERT INTO Employeess(FirstName,LastName,Email,City,Mobile)
+VALUES('Sai','Ram','sairam@gmail.com','Tenali',7698504321)
+,('Sreejha','Prathipati','saisreejha@gmail.com','Miyapur',9698904321),
+('Vijaya','Lakshmi','vijayaprathipati@gmail.com','Tenali',9698594320),
+('Chaithanya','Chowdary','chaithanyachowdary@gmail.com','Vijayawada',9969850432),
+('Roshini','Gurram','rgurram@gmail.com','Warangal',8698504321),
+('Geethika','Thaduka','geethika@gmail.com','Kukatpally',6698504320),
+('Karthik','Nagineni','knagineni24@gmail.com','Ongole',7798504321),
+('Ravi Teja','Motamarri','mraviteja@gmail.com','Baptla',7698504325);
+
+=================================================================================
+
+
+
+
+create table Departmentss
+(
+  Dept_no int not null primary key identity(1,1),
+  Dept_name varchar(100) not null,
+  Dept_location varchar(100) not null,
+  Emp int not null,
+  FOREIGN KEY(Emp) REFERENCES Employees(EmployeeID) 
+);
+INSERT INTO Departmentss(Dept_name,Dept_location,Emp)VALUES('HR','Hyderabad',1),('Manager','Bangalore',2),('TR',),()

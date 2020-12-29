@@ -1,0 +1,109 @@
+﻿@model IEnumerable<MyFirstMVC.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<form method="get" asp-action="Index">
+    <label for="Field"><b>Choose a field:</b></label>
+    <select name="EmpFields" id="srchBy">
+
+        <option value="EmpId">EmpId</option>
+        <option value="EmpName">Name</option>
+        <option value="EmpSalary">Salary</option>
+        <option value="city">Location</option>
+        
+   
+    </select>
+    @Html.TextBox("search")
+    <input type="submit" value="Search" id="srchbtn" />
+</form>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NetSalary)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="tData">
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetSalary)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmpId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmpId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmpId">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#search").keyup(function () {
+            var searchBy = $("#srchBy").val();
+            var searchValue = $("#search").val();
+            var SetData = $("#tData");
+            SetData.html("");
+            $.ajax({
+                type: "post",
+                url: "/Employees/GetResult?searchBy=" +searchBy + "&searchValue=" +searchValue,
+                contentType: "html",
+                success: function (result) {
+                    if (result.length == 0) {
+                        SetData.append('<tr><td colspan=4>No Match Found</td></tr>');
+                    } else {
+                        $.each(result, function (index, value) {
+                            var Data = "<tr>"
+                                +
+                                "<td>" + value.empId + "</td>" +
+                                "<td>" + value.empName + "</td>" +
+                                "<td>" + value.empSalary + "</td>" +
+                                "<td>" + value.city + "</td>" +
+                                "<td>" + value.netSalary + "</td>" +
+                                " </tr>";
+                            SetData.append(Data);
+                        
+                        });
+                    }
+                }
+            });
+        });
+    });
+</script>

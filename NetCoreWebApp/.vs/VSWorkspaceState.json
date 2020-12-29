@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\NetCoreWebApp",
+    "\\NetCoreWebApp\\Areas",
+    "\\NetCoreWebApp\\Areas\\Identity",
+    "\\NetCoreWebApp\\Areas\\Identity\\Pages",
+    "\\NetCoreWebApp\\Controllers",
+    "\\NetCoreWebApp\\Data",
+    "\\NetCoreWebApp\\Data\\Migrations",
+    "\\NetCoreWebApp\\Models"
+  ],
+  "SelectedNode": "\\NetCoreWebApp.sln",
+  "PreviewInSolutionExplorer": false
+}
