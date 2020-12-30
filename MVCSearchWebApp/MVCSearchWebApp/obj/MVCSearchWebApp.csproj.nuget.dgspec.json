@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\24\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj": {}
+    "D:\\24\\MVCProjects\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj": {}
   },
   "projects": {
-    "D:\\24\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj": {
+    "D:\\24\\MVCProjects\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\24\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj",
+        "projectUniqueName": "D:\\24\\MVCProjects\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj",
         "projectName": "MVCSearchWebApp",
-        "projectPath": "D:\\24\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj",
+        "projectPath": "D:\\24\\MVCProjects\\MVCSearchWebApp\\MVCSearchWebApp\\MVCSearchWebApp.csproj",
         "packagesPath": "C:\\Users\\sprathipati\\.nuget\\packages\\",
-        "outputPath": "D:\\24\\MVCSearchWebApp\\MVCSearchWebApp\\obj\\",
+        "outputPath": "D:\\24\\MVCProjects\\MVCSearchWebApp\\MVCSearchWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sprathipati\\AppData\\Roaming\\NuGet\\NuGet.Config",

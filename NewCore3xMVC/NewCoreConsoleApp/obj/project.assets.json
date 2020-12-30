@@ -5087,8 +5087,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gthaduka\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\mkasa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5096,14 +5095,11 @@
       "projectUniqueName": "\\\\192.168.50.220\\Freshers2020-Trainees\\NewCore3xMVC\\NewCoreConsoleApp\\NewCoreConsoleApp.csproj",
       "projectName": "NewCoreConsoleApp",
       "projectPath": "\\\\192.168.50.220\\Freshers2020-Trainees\\NewCore3xMVC\\NewCoreConsoleApp\\NewCoreConsoleApp.csproj",
-      "packagesPath": "C:\\Users\\gthaduka\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\mkasa\\.nuget\\packages\\",
       "outputPath": "\\\\192.168.50.220\\Freshers2020-Trainees\\NewCore3xMVC\\NewCoreConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gthaduka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mkasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

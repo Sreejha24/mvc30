@@ -16,6 +16,7 @@ using RepositoryPattern;
 using RepositoryPattern.Data;
 using Microsoft.Extensions.Options;
 using NewCore3xMVC.DependencyInjection;
+using NewCore3xMVC.Middlewares;
 
 namespace NewCore3xMVC
 {
@@ -46,7 +47,7 @@ namespace NewCore3xMVC
 
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
 
-            
+
 
             services.AddControllersWithViews();
 
@@ -72,12 +73,49 @@ namespace NewCore3xMVC
                 // if this is on, it shows error page that is useful for developer
                 // browser - http://localhost:55566/ErrorHandling
                 app.UseDeveloperExceptionPage();
-                
+
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+
+            // START - middleware
+            // when using app.Use, we have to pass the handle to the next middle ware
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("First middle ware.");
+            //    await next();
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Second middle ware.");
+            //    await next();
+            //});
+
+            //// custom middleware | Check Middlewares folder
+             app.UseMyCustomMiddleware();
+
+            //// when usingn app.Run, that is the final middle ware to run
+            //app.Run(async (context) =>
+            //    {
+            //        await context.Response.WriteAsync("Third and last middleware.");
+            //    });
+
+            //app.Use(async (context, next) =>
+            //{
+
+            //    if (context.Request.Path.Equals("/dotnetfunda"))
+            //    {
+            //        context.Response.Redirect("http://www.dotnetfunda.com");
+            //        return;
+            //    }
+            //    await next();
+            //});
+            // END - middleware
+
 
             // START - response caching
 
@@ -86,11 +124,11 @@ namespace NewCore3xMVC
             //app.Use(async (context, next) =>
             //{
             //    context.Response.GetTypedHeaders().CacheControl =
-            //    new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
-            //    {
-            //        Public = true,
-            //        MaxAge = TimeSpan.FromSeconds(300)
-            //    };
+            //                new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
+            //                {
+            //                    Public = true,
+            //                    MaxAge = TimeSpan.FromSeconds(300)
+            //                };
 
             //    context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.Vary] = new string[] { "Accept-Encoding" };
 
@@ -110,7 +148,7 @@ namespace NewCore3xMVC
                 endpoints.MapGet("/Hello", async context =>
                 {
                     // await context.Response.WriteAsync("Hello .NET Core MVC");
-                    
+
                     context.Response.Redirect("https://www.dotnetfunda.com");
                 });
 

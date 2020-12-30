@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MVCWebApp.Models.PAddress>
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+
+<div class="card">
+    <div class="card-body">
+        <form action="/People/Search" method="post" class="form-inline">
+            <label class="mr-sm-2">Keyword</label>
+            <input type="text" placeholder="Keyword" name="keyword" value="@ViewBag.Keyword" required class="form-control mr-sm-2" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+
+            <label class="ml-sm-5">@Model.Count() record(s) found</label>
+        </form>
+    </div>
+</div>
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddressLine)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pin)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddressLine)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pin)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.AddressID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.AddressID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.AddressID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

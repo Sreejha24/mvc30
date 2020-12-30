@@ -6,6 +6,7 @@ D:\A-SNarayan\Sheo\Tutorials\DotNetCore2020\Apps\NewCore3xMVC\RepositoryPattern\
 D:\A-SNarayan\Sheo\Tutorials\DotNetCore2020\Apps\NewCore3xMVC\RepositoryPattern\bin\Debug\netcoreapp3.1\RepositoryPattern.pdb
 D:\A-SNarayan\Sheo\Tutorials\DotNetCore2020\Apps\NewCore3xMVC\RepositoryPattern\obj\Debug\netcoreapp3.1\RepositoryPattern.dll
 D:\A-SNarayan\Sheo\Tutorials\DotNetCore2020\Apps\NewCore3xMVC\RepositoryPattern\obj\Debug\netcoreapp3.1\RepositoryPattern.pdb
+D:\A-SNarayan\Sheo\Tutorials\DotNetCore2020\Apps\NewCore3xMVC\RepositoryPattern\obj\Debug\netcoreapp3.1\RepositoryPattern.csprojAssemblyReference.cache
 \\192.168.50.220\Freshers2020-Trainees\NewCore3xMVC\RepositoryPattern\bin\Debug\netcoreapp3.1\RepositoryPattern.deps.json
 \\192.168.50.220\Freshers2020-Trainees\NewCore3xMVC\RepositoryPattern\bin\Debug\netcoreapp3.1\RepositoryPattern.dll
 \\192.168.50.220\Freshers2020-Trainees\NewCore3xMVC\RepositoryPattern\obj\Debug\netcoreapp3.1\RepositoryPattern.csprojAssemblyReference.cache
